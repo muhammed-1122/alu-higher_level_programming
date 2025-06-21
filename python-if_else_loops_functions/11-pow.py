@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def pow(a, b):
-    return a ** b
-print(pow(3, 4))
+    print(a ** b)
+pow(3, 4)
