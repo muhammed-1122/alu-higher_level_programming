@@ -16,7 +16,8 @@ class Student:
         If attrs is a list of strings, return only those attributes.
         """
         if isinstance(attrs, list) and all(isinstance(i, str) for i in attrs):
-            return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+            return {key: getattr(self, key) 
+                for key in attrs if hasattr(self, key)}
         return self.__dict__
 
     def reload_from_json(self, json):
