@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""Fetches https://alu-intranet.hbtn.io/status using urllib"""
+"""
+Fetches the status from a given URL and prints the response content,
+its type, and its UTF-8 decoded form. Uses urllib only.
+"""
 
 import urllib.request
 
 if __name__ == "__main__":
-    url = "https://alu-intranet.hbtn.io/status"
+    url = "http://0.0.0.0:5050/status"
     with urllib.request.urlopen(url) as response:
         body = response.read()
         print("Body response:")
